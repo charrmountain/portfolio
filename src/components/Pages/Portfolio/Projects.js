@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import satellite from "./images/sat.png";
 import met from "./images/met.png";
-import weatherimg from "./images/weather.png";
+import ferociousimg from "./images/ferocious.png";
 import news from "./images/news.png";
 import burger from "./images/burger.png";
 import note from "./images/notes.png";
@@ -30,7 +30,51 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 let pages = {
-  informer: {
+  greenPro: {
+    title: "Green Pro Cleaning",
+    source: "Lead Developer",
+    employee: "Ferocious Media",
+    about:
+      "WordPress site created for Green Pro Cleaning.",
+    image: ferociousimg,
+    gif: "",
+    github: "",
+    href: "https://gogreenprocleaning.com/",
+  },
+  craigs: {
+    title: "Craig's Services",
+    source: "Lead Developer",
+    employee: "Ferocious Media",
+    about:
+      "WordPress site created for Craig's Services.",
+    image: ferociousimg,
+    gif: "",
+    github: "",
+    href: "https://craigsserivces.com/",
+  },
+  silverado: {
+    title: "Silverado Mechanical",
+    source: "Lead Developer",
+    employee: "Ferocious Media",
+    about:
+      "WordPress site created for Silverado Mechanical.",
+    image: ferociousimg,
+    gif: "",
+    github: "",
+    href: "https://silveradomechanical.com/",
+  },
+  emerald: {
+    title: "Emerald Home Services",
+    source: "Lead Developer",
+    employee: "Ferocious Media",
+    about:
+      "WordPress site created for Emerald Home Services.",
+    image: ferociousimg,
+    gif: "",
+    github: "",
+    href: "https://emeraldhomeservices.com/",
+  },
+    informer: {
     title: "Elite Informer",
     source: "Lead Developer",
     employee: " Agent Elite",
@@ -61,45 +105,25 @@ let pages = {
     github: "https://github.com/charrmountain/a-day-out/",
     href: "https://charrmountain.github.io/a-day-out/",
   },
-  weather: {
-    title: "Weather Dashboard",
-    source: "Bootcamp",
-    about:
-      "Weather dashboard that will retrieve a city's current weather and forecast from the user's choice.",
-    image: weatherimg,
-    gif: weatherGif,
-    github: "https://github.com/charrmountain/weather-forecast/",
-    href: "https://charrmountain.github.io/weather-forecast/",
-  },
-  burger: {
-    title: "Burger Devour",
-    source: "Bootcamp",
-    about:
-      "An entertaining application that allows the user to create and devour burgers.",
-    image: burger,
-    gif: burgerGif,
-    github: "https://github.com/charrmountain/burger/",
-    href: "https://evening-thicket-44264.herokuapp.com/",
-  },
-  notes: {
-    title: "Note Taker",
-    source: "Bootcamp",
-    about: "An application that can be used to write, save, and delete notes.",
-    image: note,
-    gif: noteGif,
-    github: "https://github.com/charrmountain/note-taker/",
-    href: "https://blooming-forest-27574.herokuapp.com/",
-  },
-  planner: {
-    title: "Daily Planner",
-    source: "Bootcamp",
-    about:
-      "A daily work planner that displays hourly storable sections that changes color to display past, current, and future hours.",
-    image: work,
-    gif: workGif,
-    github: "https://github.com/charrmountain/work-day-scheduler/",
-    href: "https://charrmountain.github.io/work-day-scheduler",
-  },
+  // notes: {
+  //   title: "Note Taker",
+  //   source: "Bootcamp",
+  //   about: "An application that can be used to write, save, and delete notes.",
+  //   image: note,
+  //   gif: noteGif,
+  //   github: "https://github.com/charrmountain/note-taker/",
+  //   href: "https://blooming-forest-27574.herokuapp.com/",
+  // },
+  // planner: {
+  //   title: "Daily Planner",
+  //   source: "Bootcamp",
+  //   about:
+  //     "A daily work planner that displays hourly storable sections that changes color to display past, current, and future hours.",
+  //   image: work,
+  //   gif: workGif,
+  //   github: "https://github.com/charrmountain/work-day-scheduler/",
+  //   href: "https://charrmountain.github.io/work-day-scheduler",
+  // },
 };
 
 export default class Projects extends Component {
@@ -271,7 +295,7 @@ export default class Projects extends Component {
                       {this.state.currentPage.source}
                       {this.state.currentPage.employee !== undefined && (
                         <span className="projectEmployee">
-                          Employed at {this.state.currentPage.employee}
+                          Employed: {this.state.currentPage.employee}
                         </span>
                       )}
                     </span>
